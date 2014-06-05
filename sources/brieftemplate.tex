@@ -1,0 +1,103 @@
+% brieftemplate.tex
+% Copyright 2008 Markus Kohm
+% 
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+% http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+% 
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Markus Kohm.
+% 
+% This work consists of this file only.
+%-----------------------------------------------------------------------
+%%****************************************************************************
+%% $Id: brief.tex,v 1.1 2003/02/02 14:53:14 mjk Exp $
+%%****************************************************************************
+%% Author: Markus Kohm <kohm@gmx.de>
+%%----------------------------------------------------------------------------
+%%
+%% Daten für Beispielbriefe für den Artikel komabrief.tex
+%%
+%%----------------------------------------------------------------------------
+
+\usepackage{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{mathpazo}
+%\usepackage[scaled]{helvet}
+\usepackage{charter}
+\usepackage[scaled=0.87]{luximono}
+\usepackage[scaled=0.92]{frutiger}
+
+%\makeatletter % Fix a bug at scrlttr2
+%\let\save@typearea@end\@typearea@end
+%\def\@typearea@end{
+%  \if@twoside
+%    \addtolength{\oddsidemargin}{\evensidemargin}
+%    \addtolength{\oddsidemargin}{-\ta@bcor}
+%    \setlength{\evensidemargin}{.5\oddsidemargin}
+%    \setlength{\oddsidemargin}{\evensidemargin}
+%    \addtolength{\oddsidemargin}{\ta@bcor}
+%  \fi
+%  \save@typearea@end
+%}
+%\makeatother
+
+\KOMAoptions{DIV=last}
+
+\providecommand{\SetSize}{%
+  \AtBeginDvi{\special{papersize=210mm,210mm}}%
+  \AtBeginDocument{%
+    \ifpdfoutput{%
+      \pdfpagewidth=210mm
+      \pdfpageheight=210mm
+    }{}%
+  }%
+}
+\SetSize
+
+\setkomavar{fromlogo}{\includegraphics[width=3cm]{CaptainHook-1}}
+\setkomavar{fromname}{Kapitän Hook}
+\setkomavar{fromaddress}{Bucht der Totenkopfinsel\\Nimmerland}
+\setkomavar{fromphone}{222}
+\setkomavar{fromfax}{444}
+\setkomavar{fromemail}{hook@piraten.nim}
+\setkomavar{fromurl}{www.hook.nim}
+\setkomavar{frombank}{Bank für Piraten\\
+  BLZ: 222\,222\,00\\
+  Konto: 222\,222\,222}
+
+\providecommand*{\AbsCnt}{1}
+\newcommand*{\Absatztext}{%
+  Es wäre daher von dir besonders freundlich, wenn du deinen grünen
+  Hintern umgehend zu einem Zweikampf auf die Totenkopfinsel bewegen
+  könntest. Da es schade wäre, wenn du statt durch meinen neuen
+  Liebling durch eine Blutvergiftung dahingerafft würdest, werde ich
+  bei unserem Kampf meinen silbernen Sonntagshaken tragen. Ich hoffe,
+  du wirst diese Ehre zu schätzen wissen!\par%
+}
+\newcounter{Abs}\setcounter{Abs}{0}
+\newcommand*{\Absatz}{%
+  \ifnum \number\value{Abs}<\number\AbsCnt\relax
+    \stepcounter{Abs}%
+    \Absatztext
+    \expandafter\Absatz
+  \fi
+}
+\newcommand*{\Brief}{%
+  \begin{letter}{%
+      Peter Pan\\Lager der wilden Jungs\\Nimmerland}
+    \opening{Bester Feind,}
+    nachdem es mir gelungen ist, das Krokodil an die Kette zu legen,
+    warte  ich sehnsüchtig darauf, ihm nicht nur deine Hände, sondern
+    den ganzen verteufelten Kerl zum Fraß vorzuwerfen. 
+    \Absatz
+    \closing{In freundlichster Feindschaft}
+  \end{letter}%
+}

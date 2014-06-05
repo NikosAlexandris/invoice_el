@@ -1,0 +1,272 @@
+% custom invoice template -- Minimal Working Example
+% Based on:
+
+% brieftemplate.tex
+% Copyright 2008 Markus Kohm
+
+
+\RequirePackage{fix-cm}
+
+\usepackage{mathpazo}
+\usepackage{kerkis}
+\usepackage{tgheros}
+\renewcommand{\sfdefault}{lmss}
+\usepackage[LGRx,T1]{fontenc} % Also for ``Greek'' Content?
+\usepackage[utf8x]{inputenc}
+\usepackage[greek]{babel}
+
+\usepackage{geometry}
+\geometry{verbose,tmargin=0cm,bmargin=0cm}
+
+\setlength{\parskip}{\smallskipamount}
+
+% No indentation at all!
+\setlength{\parindent}{0pt}
+
+
+% Colors
+
+\usepackage{color}
+\usepackage{xcolor}
+
+% define marine blue
+\definecolor{marineblue}{rgb}{0.05,0.1,0.4}
+\definecolor{marineblue2}{rgb}{0.05,0.1,0.5}
+
+% define lightgray
+\definecolor{lightgray08}{gray}{0.8}
+\definecolor{lightgray06}{gray}{0.6}
+\definecolor{lightgray04}{gray}{0.4}
+\definecolor{lightgray02}{gray}{0.2}
+
+\usepackage{array}
+\usepackage{textcomp}
+
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+
+
+\usepackage{charter}
+\usepackage[scaled]{helvet}
+\usepackage[scaled=0.87]{luximono}
+% \usepackage[scaled=0.92]{frutigernext}% Does not play nice!
+
+%
+\usepackage{setspace}
+\setstretch{1.15}
+
+% hyperref
+\usepackage[%
+  pdftitle={PDF-Title},
+  pdfauthor={Author},
+  pdfsubject={PDF-Subject},
+  pdfkeywords={keyword1, keyword2, keyword3},
+  linkcolor=magenta,
+  urlcolor=marineblue2,
+  citecolor=blue,
+  pdfstartview={FitH},
+  hyperfootnotes=false,
+  unicode=true,
+  bookmarks=false,
+  breaklinks=false,
+  pdfborder={0 0 0},
+  backref=false,
+  colorlinks=true]{hyperref}
+
+% \providecommand{\SetSize}{%
+%   \AtBeginDvi{\special{papersize=210mm,210mm}}%
+%   \AtBeginDocument{%
+%     \ifpdfoutput{%
+%       \pdfpagewidth=210mm
+%       \pdfpageheight=210mm
+%     }{}%
+%   }%
+% }
+% \SetSize
+
+
+%
+\makeatletter
+
+%
+\usepackage{bookmark}
+
+% Martin Vogels Symbols
+\usepackage{marvosym}
+\usepackage{ocr}
+
+%% Remove preceeding '%' to uncomment an item
+\KOMAoptions{%
+DIV=last%
+,headsepline=true%	separate the header with a line on page >1
+%,footsepline=true%	separate the footer with a line on page >1
+%pagenumber=botcenter%	position of the page number (see docu)
+,parskip=full-%	Use indent instead of skip (more options cf. docu)
+%,fromalign=center%	alignment of the address
+,fromrule=aftername%	separate the address with a line?
+,fromphone=true%	print sender phone number
+,fromfax=false%		print sender fax number
+,fromemail=true%	print sender e-mail address
+,fromurl=true%		print sender URL
+,fromlogo=true%		print a logo (position depends on fromalign)
+%,addrfield=false%	print an address field?
+% ,backaddress=false%	print the back address?
+,subject=centered%,titled%	alternative subject layout and position
+%,locfield=narrow%	width of the (extra) location field
+,foldmarks=true%	print foldmarks?
+% ,numericaldate=true%	date layout
+,refline=narrow%	layout of the refline
+}
+
+%% Customize Separators
+
+\setkomavar{placeseparator}{~}%\setkomavar{placeseparator}{ -- }
+\setkomavar{backaddressseparator}{ $\cdot$ }
+%\setkomavar{emailseparator}{ --> }
+\setkomavar{enclseparator}{ > }
+%\setkomavar{faxseparator}{ --> }
+%\setkomavar{phoneseparator}{ --> }
+%\setkomavar{subjectseparator}{ >>> }
+
+%% Customize fonts
+
+%% Use LaTeX's standard font commands
+%% Modify with \setkomafont or \addtokomafont
+%% (see KOMA documentation)
+\setkomafont{backaddress}{\rmfamily}
+% \setkomafont{descriptionlabel}{}
+% \setkomafont{fromaddress}{\small}
+\setkomafont{fromname}{\scshape}
+%\setkomafont{pagefoot}{}
+%\setkomafont{pagehead}{}
+%\setkomafont{pagenumber}{}
+
+%\setkomafont{title}{}
+% \addtokomafont{title}{\color{lightgray04}}
+
+%\setkomafont{subject}{}
+\addtokomafont{subject}{\color{lightgray04}}
+
+% foldmarks
+\addtokomafont{foldmark}{\color{lightgray06}}
+
+
+% Place, Location
+
+% \setkomavar{placeseparator
+\setkomavar{place}{\textcolor{lightgray04}{Μέρος, Χώρα}}
+% \setkomavar{location}
+
+
+% Logo
+
+\setkomavar{fromlogo}{\includegraphics[clip,width=3cm,height=3cm,bb = 0 0 200 100, draft, type=eps]{qr_coded_mecard}\\
+{\scriptsize{\textcolor{lightgray}{\foreignlanguage{english}{MECARD}}\hfill{}}}}
+
+
+% Name
+
+\setkomavar{fromname}{\textcolor{lightgray04}{\textsc{Όνομα \textbf{Επώνυμο}}, Τίτλος}}
+
+
+% Signature
+\@setplength{sigbeforevskip}{0mm}
+% \@setplength{sigindent}{0mm}
+\setkomavar{signature}{Με εκτίμηση,\\\includegraphics[width=84mm, height=24mm, keepaspectratio, bb = 0 0 200 100, draft, type=eps]{signature}\\
+{\small{Όνομα κ Επώνυμο}}}
+
+
+% Professional Identity / Company
+
+\setkomavar{company}{\textcolor{lightgray04}{Επιχείρηση}}
+
+
+% Professional Identities
+
+\setkomavar{professiona}{\textcolor{lightgray06}{Δραστηριότητα A}}
+\setkomavar{professionb}{\textcolor{lightgray04}{Δραστηριότητα B}\\%
+\textcolor{lightgray06}{Πληροφορίες επαγγελματικής δραστηριότητας B}}
+
+
+% VATin
+
+\setkomavar{fromvatin}{\textcolor{lightgray04}{{ΑΦΜ}\\\ocr{XX\,111\,222\,333}\\ΔΟΥ\\Μέρος, Χώρα}}
+
+
+% Address(es)
+
+\setkomavar{fromaddress}{{\large\textcolor{lightgray06}{\Letter}}~\\{\color{lightgray04}{Οδός Αρ.\\Ταχυδρομικός\,Κωδικός Πόλη\\Χώρα}}}
+\setkomavar{fromzipcode}{Ταχυδρομικός\,Κωδικός}
+\setkomavar{backaddress}{Όνομα\\Οδός Αρ.\\Ταχυδρομικός\,Κωδικός Πόλη\\Χώρα}
+
+
+% Phone
+
+\setkomavar{fromphone}[]{{\large\textcolor{lightgray06}{\Mobilefone}}\\{\textcolor{lightgray04}{\ocr{+00\,1122\,333\,444}}}}
+
+
+% FAX
+% \setkomavar{fromfax}[]
+
+% e-Mail
+
+\setkomavar{fromemail}{{\large\textcolor{lightgray04}{\Email}}\\{\href{mailto:userid@domain.name}{\foreignlanguage{english}{userid\,@\,domain.name}}}}
+
+
+% Web
+
+\setkomavar{fromurl}{{\Info}~\href{web:websitename}{websitename}}
+\setkomavar{fromlinkedin}{\includegraphics[width=0.25cm,height=0.25cm]{linkedin.png}\\{\href{http://xx.linkedin.com/pub/account-name}{\foreignlanguage{english}{linkedin.com/pub/account-name}}}}
+
+
+% Banking
+
+\setkomavar{frombank}{\color{lightgray06}{Κάτοχος λογαριασμού}\\%
+\textcolor{lightgray04}{\ocr{NAME LASTNAME}}\\[\smallskip]%
+\foreignlanguage{english}{IBAN\\}%
+\textcolor{lightgray04}{\ocr{XX0123456789012345678901234}}\\[\smallskip]%
+\foreignlanguage{english}{SWIFT\,-\,BIC\\}%
+\textcolor{lightgray04}{\ocr{QQQQQQQQ}}}%
+
+% appendix
+\AtBeginDocument{%
+
+% \providecaptionname{greek}\datename{Ημερομηνία}%
+\providecaptionname{greek}{\datename}{Ημερομηνία}%
+\providecaptionname{greek}\subjectname{Θέμα}%
+
+\providecaptionname{greek}\headtoname{Προς}%
+
+% \providecaptionname{greek}\customername{Customer no.}%
+\providecaptionname{greek}{\customername}{Πελάτης (Κωδικός, Αριθμός)}%
+
+% \providecaptionname{greek}\yourmailname{Your letter of}%
+\providecaptionname{greek}\yourmailname{Εγγραφή Πελάτη}%
+
+% \providecaptionname{greek}\yourrefname{Your ref.}%
+\providecaptionname{greek}{\yourrefname}{Διακριτικός τίτλος έργου}%
+
+\providecaptionname{greek}\headfromname{Από}%
+\providecaptionname{greek}\emailname{η-Ταχυδρομείο}%
+\providecaptionname{greek}\wwwname{Url}%
+\providecaptionname{greek}\phonename{Τηλέφωνο}%
+\providecaptionname{greek}\faxname{Τηλεομοιότυπο}%
+
+% \providecaptionname{greek}\myrefname{Our ref.}%
+\providecaptionname{greek}{\myrefname}{Εσωτερική εγγραφή}%
+
+% \providecaptionname{greek}\invoicename{Invoice no.}%
+\providecaptionname{greek}{\invoicename}{Τιμολόγιο No.}%
+
+% \providecaptionname{greek}\bankname{Bank account}%
+\providecaptionname{greek}{\bankname}{Τραπεζικός Λογαριασμός}%
+
+\providecaptionname{greek}\ccname{cc}%
+\providecaptionname{greek}\enclname{Επισυναπτόμενα}%
+
+\providecaptionname{greek}\pagename{Σελίδα}%
+
+% Custom variables
+% \providecaptionname{greek}\fromvatin{ΑΦΜ}%	Does not work!
+\newcaptionname{greek}\yourvatinname{ΑΦΜ}%	Does not work!
+}

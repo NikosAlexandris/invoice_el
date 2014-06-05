@@ -1,0 +1,79 @@
+%% Custom invoice template in Greek -- Minimal Working Example
+
+%% Based on:
+
+  % briefwbk.tex
+  % Copyright 2008 Markus Kohm
+
+\documentclass[%
+  english,
+  custom_invoice_asymTypB_el,
+  DIV=8,
+  fontsize=11pt]{scrlttr2}
+
+% Structure and Basic Information
+\input{custom_invoice_template_el.tex}
+    % \usepackage[LGR,T1]{fontenc}
+    % \usepackage[utf8]{inputenc}
+
+
+% What, Where, When?
+\setkomavar{title}{Προσφορά\,/\,Τιμολόγιο}
+\setkomavar{subject}{Προσφορά για... \textbf{υυυ}}
+
+\setkomavar{toname}{Προς Όνομα \scshape{Επώνυμο}}
+\setkomavar{toaddress}{Προς, Διεύθυνση, Γραμμή 1\\Ταχυδρομικός Κωδικός, Έδρα\\Χώρα}
+
+\renewcaptionname{english}{\customername}{Customer}
+\setkomavar{customer}{Πελάτης}
+
+\addtokomafont{refname}{\color{lightgray06}}
+\setkomavar{refname}{Αναφορά/Εγγραφή/Κωδικός}
+
+\addtokomafont{refvalue}{\small\color{lightgray04}}
+\setkomavar{refvalue}{Περιγραφή Αναφοράς...}
+
+\setkomavar{invoice}{Τιμολόγιο, Αριθμός}
+
+\setkomavar{myref}{Έργο: υυυ}
+
+\setkomavar{yourmail}{Συμβόλαιο για...\\Ημερο-Μηνία}
+\setkomavar{yourref}{Συμβόλαιο:\,ΑΒΓ/012-345\\ΔΕΖ:\,6789-ΗΘΙ-0123-4567-0000-000}
+\setkomavar{yourvatin}{\emph{ΑΦΜ πελάτη ή σχετικές παρατηρήσεις}}
+
+
+% Place, Location
+\setkomavar{place}{Μέρος}
+% \setkomavar{placeseparator}
+% \setkomavar{location}{Τοποθεσία}
+
+
+% Date
+\setkomavar{date}{\today}
+
+
+%
+\begin{document}
+
+  \begin{letter}{κος./κα. χχχ χχχ\\
+  Ίδρυμα\\
+  Περιγραφή\\
+  Γραμμή Διεύθυνσης\\
+  Ταχυδρομικός Κωδικός, Έδρα\\
+  Χώρα}
+
+  \opening{κ./κα. χχχ,}
+
+  \begin{flushleft}
+  ...
+  
+  ...
+
+  \end{flushleft}
+
+   \encl{Επισυναπτόμενα}
+   \cc{Επαφή 1, Επαφή 2, ...}
+
+  \end{letter}
+
+\end{document}

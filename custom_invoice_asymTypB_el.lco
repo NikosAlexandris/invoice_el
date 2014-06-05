@@ -1,0 +1,168 @@
+%% Custom Template for an Invoice (Letter)
+%% Based on:
+
+% ---------------------------------------------------------------------
+% asymTypB.lco
+% Copyright 2008 Markus Kohm
+% 
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+% http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+% 
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Markus Kohm.
+% 
+% This work consists of this file only.
+%-----------------------------------------------------------------------
+
+
+% Metadata about this file
+\ProvidesFile{custom_invoice_asymTypB_el.lco}%
+             [2014/06/05 unsupported LCO-file]%
+
+% DIN 676 B
+\LoadLetterOption{DINmtext}%
+
+% Place letter body to the left
+\setlength{\oddsidemargin}{\useplength{toaddrhpos}}%
+\addtolength{\oddsidemargin}{-2.54cm}%
+
+% Again... ?
+\AfterCalculatingTypearea{%
+  \setlength{\oddsidemargin}{\useplength{toaddrhpos}}%
+  \addtolength{\oddsidemargin}{-2.54cm}%
+}%
+\activateareas
+
+% Head
+\@setplength{firstheadvpos}{0pt}%
+\@setplength{firstheadwidth}{\paperwidth}%
+
+% Foot
+\@setplength{firstfootvpos}{\paperheight}%
+\@addtoplength[-]{firstfootvpos}{\useplength{toaddrvpos}}%
+
+% Reference
+\@addtoplength{refvpos}{-1.5\baselineskip}%
+
+% New variable(s) here!
+\newkomavar{company}%
+\newkomavar{professiona}%
+\newkomavar{professionb}%
+\newkomavar{fromvatin}%
+\newkomavar{fromlinkedin}%
+
+% New variables that concern the client here!
+\newkomavar*[ΑΦΜ Πελάτη]{yourvatin}%
+
+% Set pseudo-length for infocol
+\@newplength{infocolwidth}%
+\ifdim \textwidth<0.666\paperwidth% How is this supposed to work?
+  \@setplength{infocolwidth}{.2\paperwidth}%
+\else
+  \@setplength{infocolwidth}{.21\paperwidth}%{0.1667\paperwidth}%
+\fi
+
+
+% Set Head first... ?
+\setkomavar{firsthead}{%
+  \fontsize{9}{10}\sffamily% Font size(s)
+  \hspace*{\fill}%
+  \begin{picture}(0,0)%
+    % Logo?
+    \put(0,0){\parbox[t]{\useplength{infocolwidth}}{%
+        \vspace{\useplength{toaddrvpos}}%
+        \usekomavar{fromlogo}%
+      }%
+    }%
+    % Date only
+      \put(-224,0){\parbox[t]{2.45\useplength{infocolwidth}}{%
+        \flushright
+        \vspace{\useplength{refvpos}}%
+        \vspace{\useplength{refaftervskip}}%
+        \usekomavar{place}\\%
+        \usekomavar{date}%
+      }
+      }
+    % Main block of Info-Column
+      \put(0,0){\parbox[t]{\useplength{infocolwidth}}{%
+        \raggedright%
+        \vspace{\useplength{refvpos}}%
+        \vspace{\useplength{refaftervskip}}
+        \vspace{8\baselineskip}%
+        \usekomavar{fromname}\\[\baselineskip]%
+        \ifkomavarempty{company}{}{%
+          \\
+          \usekomavar{company}\\%
+        }%
+        \usekomavar{professiona}\\[\baselineskip]%
+        \usekomavar{professionb}\\[\baselineskip]%
+        \usekomavar{fromaddress}\\[\baselineskip]%
+        \usekomavar*{fromphone}\usekomavar{fromphone}\\[\baselineskip]%
+        \ifkomavarempty{fromfax}{}{%
+	  \\
+	  \usekomavar*{fromfax}\usekomavar{fromfax}%
+        }%
+        \usekomavar{fromemail}\\[\baselineskip]%
+        %\usekomavar{fromurl}\\%
+        \usekomavar{fromlinkedin}\\[\baselineskip]%
+        \usekomavar[\textbf{\textcolor{lightgray06}}\\]{fromvatin}%
+      }%
+    }%
+    % Banking information
+    \put(-200,0){\parbox[t]{2.45\useplength{infocolwidth}}{%
+        \flushright
+        \vspace{\useplength{firstfootvpos}}%
+        \vspace{-\footskip}%
+        \usekomavar{frombank}%
+      }%
+    }%
+  \end{picture}%
+  \hspace*{\useplength{infocolwidth}}%
+}%
+
+% Set Signature in the Footer... ?
+\setkomavar{firstfoot}{%
+  \parbox[t]{\textwidth}{%\footnotesize%
+    \ifkomavarempty{signature}{\hfill}{%
+      \vspace{-1.3\footskip}%
+      \closing{}%
+    }%
+  }%
+}
+
+
+\KOMAoption{refline}{nodate}
+\setkomavar{nexthead}{%
+  \@tempswatrue
+  \if@twoside\ifodd\number\value{page}\else
+      \@tempswafalse
+  \fi\fi
+  \if@tempswa
+    \makebox[0pt][l]{%
+      \hspace*{-\oddsidemargin}\hspace{-1in}%
+      \hspace{\paperwidth}%
+      \hspace{-\useplength{infocolwidth}}%
+      \normalfont\fontsize{7}{8}\sffamily
+      \begin{picture}(0,0)
+        \put(0,0){\parbox[t]{\useplength{infocolwidth}}{%
+            \vspace*{-\topmargin}\vspace{-1in}%
+            \vspace{-\headheight}%
+            \vspace{\useplength{toaddrvpos}}%
+            \begin{tabular}{@{}c@{}}
+              \usekomavar{fromlogo}\\
+              \usekomavar{company}\\
+            \end{tabular}%
+          }%
+        }%
+      \end{picture}%
+    }%
+  \fi
+}%
+\pagestyle{headings}%
+\endinput
