@@ -48,7 +48,7 @@
 
 \usepackage{charter}
 \usepackage[scaled]{helvet}
-\usepackage[scaled=0.87]{luximono}
+%\usepackage[scaled=0.87]{luximono}
 % \usepackage[scaled=0.92]{frutigernext}% Does not play nice!
 
 %
@@ -160,7 +160,7 @@ DIV=last%
 
 % Logo
 
-\setkomavar{fromlogo}{\includegraphics[clip,width=3cm,height=3cm,bb = 0 0 200 100, draft, type=eps]{qr_coded_mecard}\\
+\setkomavar{fromlogo}{\includegraphics[clip,width=3cm,height=3cm, draft, type=eps]{qr_coded_mecard}\\
 {\scriptsize{\textcolor{lightgray}{\foreignlanguage{english}{MECARD}}\hfill{}}}}
 
 
@@ -172,7 +172,7 @@ DIV=last%
 % Signature
 \@setplength{sigbeforevskip}{0mm}
 % \@setplength{sigindent}{0mm}
-\setkomavar{signature}{Με εκτίμηση,\\\includegraphics[width=84mm, height=24mm, keepaspectratio, bb = 0 0 200 100, draft, type=eps]{signature}\\
+\setkomavar{signature}{Με εκτίμηση,\\\includegraphics[width=84mm, height=24mm, keepaspectratio, draft, type=eps]{signature}\\
 {\small{Όνομα κ Επώνυμο}}}
 
 
@@ -238,7 +238,7 @@ DIV=last%
 \providecaptionname{greek}\headtoname{Προς}%
 
 % \providecaptionname{greek}\customername{Customer no.}%
-\providecaptionname{greek}{\customername}{Πελάτης (Κωδικός, Αριθμός)}%
+\providecaptionname{greek}{\customername}{Πελάτης}%
 
 % \providecaptionname{greek}\yourmailname{Your letter of}%
 \providecaptionname{greek}\yourmailname{Εγγραφή Πελάτη}%
@@ -267,6 +267,6 @@ DIV=last%
 \providecaptionname{greek}\pagename{Σελίδα}%
 
 % Custom variables
-% \providecaptionname{greek}\fromvatin{ΑΦΜ}%	Does not work!
-\newcaptionname{greek}\yourvatinname{ΑΦΜ}%	Does not work!
+% \providecaptionname{greek}\fromvatinname{ΑΦΜ}%	Does not work!
+\providecaptionname{greek}\yourvatinname{ΑΦΜ Πελάτη}%
 }

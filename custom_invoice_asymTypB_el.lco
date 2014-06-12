@@ -50,17 +50,29 @@
 % Reference
 \@addtoplength{refvpos}{-1.5\baselineskip}%
 
-% New variable(s) here!
+% New variable(s) here! ------------------------------------------------------
 \newkomavar{company}%
+\providecaptionname{english}\companyname{Company}%
+
 \newkomavar{professiona}%
+\providecaptionname{english}\professionaname{Profession A}%
+
 \newkomavar{professionb}%
-\newkomavar{fromvatin}%
+\providecaptionname{english}\professionb{Profession B}%
+
+% \newkomavar{fromvatin}%
+\newkomavar[\fromvatinname]{fromvatin}%
+\providecaptionname{english}\fromvatinname{VATin}%
+
 \newkomavar{fromlinkedin}%
+\providecaptionname{english}\fromlinkedin{LinkedIn}%
 
 % New variables that concern the client here!
-\newkomavar*[ΑΦΜ Πελάτη]{yourvatin}%
+\newkomavar*[\yourvatinname]{yourvatin}
+\providecaptionname{english}\yourvatinname{Customer's VATin}%
 
-% Set pseudo-length for infocol
+
+% Set pseudo-length for infocol ----------------------------------------------
 \@newplength{infocolwidth}%
 \ifdim \textwidth<0.666\paperwidth% How is this supposed to work?
   \@setplength{infocolwidth}{.2\paperwidth}%
