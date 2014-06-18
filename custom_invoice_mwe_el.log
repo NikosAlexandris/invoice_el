@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.10)  12 JUN 2014 15:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.10)  18 JUN 2014 07:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -487,7 +487,7 @@ le Jorgensen, hamselv@pallej.dk
 (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 ))
-LaTeX Font Info:    Try loading font information for T1+bch on input line 119.
+LaTeX Font Info:    Try loading font information for T1+bch on input line 117.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
@@ -508,9 +508,12 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 54.73973pt
 (typearea)              \baselineskip   = 15.63992pt
-(typearea)              on input line 119.
-)
-No file custom_invoice_mwe_el.aux.
+(typearea)              on input line 117.
+) (./custom_invoice_mwe_el.aux
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 20.
+(/usr/share/texmf-dist/tex/generic/babel-greek/lgrcmr.fd
+File: lgrcmr.fd 2008/06/17 v2.3 Greek Computer Modern
+))
 \openout1 = `custom_invoice_mwe_el.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
@@ -528,10 +531,6 @@ LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 53.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 53.
-(/usr/share/texmf-dist/tex/generic/babel-greek/lgrcmr.fd
-File: lgrcmr.fd 2008/06/17 v2.3 Greek Computer Modern
-)
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
@@ -798,39 +797,14 @@ LaTeX Font Info:    No file LGRphv.fd. on input line 62.
 LaTeX Font Warning: Font shape `LGR/phv/m/n' undefined
 (Font)              using `LGR/cmr/m/n' instead on input line 62.
 
+<qr_coded_mecard_template.pdf, id=4, 145.11215pt x 145.11215pt>
+File: qr_coded_mecard_template.pdf Graphic file (type pdf)
 
-! Package graphics Error: Division by 0.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62   \opening{κ./κα. χχχ,}
-                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package graphics Error: Division by 0.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62   \opening{κ./κα. χχχ,}
-                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-LaTeX Font Info:    Try loading font information for LGR+pcr on input line 62.
-LaTeX Font Info:    No file LGRpcr.fd. on input line 62.
-
-LaTeX Font Warning: Font shape `LGR/pcr/m/n' undefined
-(Font)              using `LGR/cmr/m/n' instead on input line 62.
-
+<use qr_coded_mecard_template.pdf>
+Package pdftex.def Info: qr_coded_mecard_template.pdf used on input line 62.
+(pdftex.def)             Requested size: 85.35857pt x 85.35857pt.
 LaTeX Font Info:    Try loading font information for T1+phv on input line 62.
+
 (/usr/share/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
@@ -848,19 +822,6 @@ LaTeX Font Warning: Font shape `LGR/phv/m/sc' undefined
 LaTeX Font Warning: Font shape `LGR/phv/b/sc' undefined
 (Font)              using `LGR/phv/m/n' instead on input line 62.
 
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62   \opening{κ./κα. χχχ,}
-                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 LaTeX Font Info:    Try loading font information for U+mvs on input line 62.
 (/usr/share/texmf-dist/tex/latex/marvosym/umvs.fd)
 LaTeX Font Info:    Try loading font information for OT1+ocrb on input line 62.
@@ -873,7 +834,7 @@ ty for further information.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.54997pt on input line 62.
 
-<linkedin.png, id=5, 100.54956pt x 100.54956pt>
+<linkedin.png, id=7, 100.54956pt x 100.54956pt>
 File: linkedin.png Graphic file (type png)
  <use linkedin.png>
 Package pdftex.def Info: linkedin.png used on input line 62.
@@ -883,186 +844,23 @@ Package pdftex.def Info: linkedin.png used on input line 62.
 LaTeX Font Warning: Font shape `LGR/phv/b/n' undefined
 (Font)              using `LGR/phv/m/n' instead on input line 62.
 
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.62   \opening{κ./κα. χχχ,}
-                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.62   \opening{κ./κα. χχχ,}
-                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.62   \opening{κ./κα. χχχ,}
-                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.62   \opening{κ./κα. χχχ,}
-                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-! Package graphics Error: Division by 0.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62   \opening{κ./κα. χχχ,}
-                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package graphics Error: Division by 0.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62   \opening{κ./κα. χχχ,}
-                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62   \opening{κ./κα. χχχ,}
-                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+File: qr_coded_mecard_template.pdf Graphic file (type pdf)
+<use qr_coded_mecard_template.pdf>
+Package pdftex.def Info: qr_coded_mecard_template.pdf used on input line 62.
+(pdftex.def)             Requested size: 85.35857pt x 85.35857pt.
 File: linkedin.png Graphic file (type png)
-<use linkedin.png>
+ <use linkedin.png>
 Package pdftex.def Info: linkedin.png used on input line 62.
 (pdftex.def)             Requested size: 7.11282pt x 7.11282pt.
 
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.62   \opening{κ./κα. χχχ,}
-                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.62   \opening{κ./κα. χχχ,}
-                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.62   \opening{κ./κα. χχχ,}
-                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.62   \opening{κ./κα. χχχ,}
-                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
 Foot of first page
 
-! Package graphics Error: Division by 0.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62   \opening{κ./κα. χχχ,}
-                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+LaTeX Font Warning: Font shape `LGR/bch/m/sc' undefined
+(Font)              using `LGR/bch/m/n' instead on input line 62.
 
 
-! Package graphics Error: Division by 0.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62   \opening{κ./κα. χχχ,}
-                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package graphics Error: Division by 0.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62   \opening{κ./κα. χχχ,}
-                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package graphics Error: Division by 0.
-
-See the graphics package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62   \opening{κ./κα. χχχ,}
-                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+LaTeX Font Warning: Font shape `LGR/bch/b/sc' undefined
+(Font)              using `LGR/bch/m/n' instead on input line 62.
 
 LaTeX Font Info:    Try loading font information for OT1+ppl on input line 62.
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1ppl.fd
@@ -1113,10 +911,11 @@ LaTeX Font Warning: Font shape `LGR/bch/b/n' undefined
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 pdfTeX warning: /usr/bin/pdflatex: pop empty color page stack 0
- <./linkedin.png>]
+ <./qr_coded_mecard_template.pdf> <./linkedin.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 75.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 75.
- (./custom_invoice_mwe_el.aux)
+
+(./custom_invoice_mwe_el.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 75.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 75.
 
@@ -1126,13 +925,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
  ) 
 Here is how much of TeX's memory you used:
- 14192 strings out of 494835
- 212000 string characters out of 6176182
- 310217 words of memory out of 5000000
- 17218 multiletter control sequences out of 15000+600000
+ 14195 strings out of 494835
+ 212175 string characters out of 6176182
+ 310795 words of memory out of 5000000
+ 17220 multiletter control sequences out of 15000+600000
  26406 words of font info for 53 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 50i,13n,55p,385b,550s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,13n,55p,385b,552s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/cbfonts/grmn0800.pfb></usr/share/texmf-dist/fonts/type1/public/cbfonts/grmn09
@@ -1141,10 +940,10 @@ re/texmf-dist/fonts/type1/public/cbfonts/grmn1095.pfb></usr/share/texmf-dist/fo
 nts/type1/public/cbfonts/grmn1728.pfb></usr/share/texmf-dist/fonts/type1/public
 /marvosym/marvosym.pfb></usr/share/texmf-dist/fonts/type1/public/ocr-b-outline/
 ocrb9.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on custom_invoice_mwe_el.pdf (1 page, 125223 bytes).
+Output written on custom_invoice_mwe_el.pdf (1 page, 124986 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 64 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
