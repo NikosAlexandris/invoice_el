@@ -85,8 +85,6 @@
 % \SetSize
 
 
-%
-\makeatletter
 
 %
 \usepackage{bookmark}
@@ -160,8 +158,8 @@ DIV=last%
 
 % Logo
 
-\setkomavar{fromlogo}{\includegraphics[clip,width=3cm,height=3cm, draft, type=eps]{qr_coded_mecard}\\
-{\scriptsize{\textcolor{lightgray}{\foreignlanguage{english}{MECARD}}\hfill{}}}}
+%\setkomavar{fromlogo}{\includegraphics[clip,width=3cm,height=3cm, draft, type=eps]{qr_coded_mecard}\\
+%{\scriptsize{\textcolor{lightgray}{\foreignlanguage{english}{MECARD}}\hfill{}}}}
 
 
 % Name
@@ -170,10 +168,12 @@ DIV=last%
 
 
 % Signature
+\makeatletter
 \@setplength{sigbeforevskip}{0mm}
 % \@setplength{sigindent}{0mm}
-\setkomavar{signature}{Με εκτίμηση,\\\includegraphics[width=84mm, height=24mm, keepaspectratio, draft, type=eps]{signature}\\
-{\small{Όνομα κ Επώνυμο}}}
+\makeatother
+%\setkomavar{signature}{Με εκτίμηση,\\\includegraphics[width=84mm, height=24mm, keepaspectratio, draft, type=eps]{signature}\\
+%{\small{Όνομα κ Επώνυμο}}}
 
 
 % Professional Identity / Company
@@ -222,9 +222,9 @@ DIV=last%
 % Banking
 
 \setkomavar{frombank}{\color{lightgray06}{Κάτοχος λογαριασμού}\\%
-\textcolor{lightgray04}{\ocr{NAME LASTNAME}}\\[\smallskip]%
+\textcolor{lightgray04}{\ocr{NAME LASTNAME}}\\[\smallskipamount]%
 \foreignlanguage{english}{IBAN\\}%
-\textcolor{lightgray04}{\ocr{XX0123456789012345678901234}}\\[\smallskip]%
+\textcolor{lightgray04}{\ocr{XX0123456789012345678901234}}\\[\smallskipamount]%
 \foreignlanguage{english}{SWIFT\,-\,BIC\\}%
 \textcolor{lightgray04}{\ocr{QQQQQQQQ}}}%
 

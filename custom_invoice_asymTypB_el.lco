@@ -103,7 +103,6 @@
       }
     % Main block of Info-Column
       \put(0,0){\parbox[t]{\useplength{infocolwidth}}{%
-        \raggedright%
         \vspace{\useplength{refvpos}}%
         \vspace{\useplength{refaftervskip}}
         \vspace{8\baselineskip}%
@@ -124,6 +123,7 @@
         %\usekomavar{fromurl}\\%
         \usekomavar{fromlinkedin}\\[\baselineskip]%
         \usekomavar[\textbf{\textcolor{lightgray06}}\\]{fromvatin}%
+        \raggedright%
       }%
     }%
     % Banking information
